@@ -1,6 +1,6 @@
-package com.luv2code.aopdemo.dao;
+package com.luv2code.aoppointcutdeclaration.dao;
 
-import com.luv2code.aopdemo.Account;
+import com.luv2code.aoppointcutdeclaration.Account;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,6 +13,4 @@ public class AccountDAO {
         System.out.println(getClass() + " : doWork()");
         return false;
     }
-
-
 }
