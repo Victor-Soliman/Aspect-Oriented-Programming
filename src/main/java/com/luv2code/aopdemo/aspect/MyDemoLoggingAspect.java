@@ -13,10 +13,11 @@ public class MyDemoLoggingAspect {
 
     // let's start with an @Before advice
 
-    @Before("execution(* add*(com.luv2code.aopdemo.Account))")   // this is called point cut expression //
+    @Before("execution(* add*(..))")   // this is called point cut expression //
     // if you want to apply on a specific class ,you should give the full qualified name ,
     // if you want to apply on all the methods from all classes ,you just write the method name
-    // if you ant to apply with a return type , it will check only the methods that matches that
+    // if you want to apply with a return type , it will check only the methods that matches that
+    // if you want to apply with matching many parameters ,you should add the first parameter ,and then .. for the rest of them
 
     public void beforeAddAccountAdvice() {
         System.out.println("\n====>>> Executing @Before advice on addAccount()");
