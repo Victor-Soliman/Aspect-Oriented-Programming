@@ -13,7 +13,7 @@ public class MyDemoLoggingAspect {
 
     // let's start with an @Before advice
 
-    @Before("execution(public void com.luv2code.aopdemo.dao.AccountDAO.addAccount())")   // this is called point cut expression //
+    @Before("execution(public void add*())")   // this is called point cut expression //
     // if you want to apply on a specific class ,you should give the full qualified name ,
     // if you want to apply on all the methods from all classes ,you just write the method name
     public void beforeAddAccountAdvice() {
