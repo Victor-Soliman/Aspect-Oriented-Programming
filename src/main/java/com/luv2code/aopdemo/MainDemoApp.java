@@ -22,7 +22,8 @@ public class MainDemoApp {
         // VERY IMPORTANT : here the advice is running on the background before calling our business method
         // call the business method
 
-        theAccountDAO.addAccount();
+        Account myAccount = new Account();
+        theAccountDAO.addAccount(myAccount);
 
         context.close();
 
