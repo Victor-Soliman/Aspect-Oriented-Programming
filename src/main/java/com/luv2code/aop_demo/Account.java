@@ -1,6 +1,6 @@
-package com.luv2code.aoppointcutdeclaration;
+package com.luv2code.aop_demo;
 
-public class Account  {
+public class Account {
 
     private String name;
     private String level;

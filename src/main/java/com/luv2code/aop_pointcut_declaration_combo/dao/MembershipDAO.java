@@ -1,4 +1,4 @@
-package com.luv2code.aoppointcutdeclaration.dao;
+package com.luv2code.aop_pointcut_declaration_combo.dao;
 
 import org.springframework.stereotype.Component;
 

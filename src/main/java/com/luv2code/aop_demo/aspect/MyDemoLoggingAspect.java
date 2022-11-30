@@ -1,4 +1,4 @@
-package com.luv2code.aopdemo.aspect;
+package com.luv2code.aop_demo.aspect;
 
 
 import org.aspectj.lang.annotation.Aspect;
@@ -13,7 +13,7 @@ public class MyDemoLoggingAspect {
 
     // let's start with an @Before advice
 
-    @Before("execution(* com.luv2code.aopdemo.dao.*.*(..))")   // this is called point cut expression //
+    @Before("execution(* com.luv2code.aop_demo.dao.*.*(..))")   // this is called point cut expression //
     // if you want to apply on a specific class ,you should give the full qualified name ,
     // if you want to apply on all the methods from all classes ,you just write the method name
     // if you want to apply with a return type , it will check only the methods that matches that

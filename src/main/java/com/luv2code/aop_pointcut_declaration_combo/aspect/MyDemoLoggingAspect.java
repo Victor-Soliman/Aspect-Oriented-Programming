@@ -1,4 +1,4 @@
-package com.luv2code.aoppointcutdeclaration.aspect;
+package com.luv2code.aop_pointcut_declaration_combo.aspect;
 
 
 import org.aspectj.lang.annotation.Aspect;
@@ -15,7 +15,7 @@ public class MyDemoLoggingAspect {
     // let's start with an @Before advice
 
     // 1.declaring a pointcut declaration
-    @Pointcut("execution(* com.luv2code.aoppointcutdeclaration.dao.*.*(..))")
+    @Pointcut("execution(* com.luv2code.aop_pointcut_declaration_combo.dao.*.*(..))")
     private void forDaoPackage() {
 
     }

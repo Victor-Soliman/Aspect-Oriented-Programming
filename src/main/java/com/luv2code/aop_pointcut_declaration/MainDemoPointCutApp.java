@@ -1,11 +1,11 @@
-package com.luv2code.aopdemo;
+package com.luv2code.aop_pointcut_declaration;
 
-import com.luv2code.aopdemo.dao.AccountDAO;
-import com.luv2code.aopdemo.dao.MembershipDAO;
+import com.luv2code.aop_pointcut_declaration.dao.AccountDAO;
+import com.luv2code.aop_pointcut_declaration.dao.MembershipDAO;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
-public class MainDemoApp {
+public class MainDemoPointCutApp {
     public static void main(String[] args) {
         // read the spring config java class
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DemoConfig.class);
