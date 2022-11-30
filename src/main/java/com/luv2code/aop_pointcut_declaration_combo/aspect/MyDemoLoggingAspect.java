@@ -20,15 +20,33 @@ public class MyDemoLoggingAspect {
 
     }
 
+    // create a pointcut for getter methods
+    @Pointcut("execution(* com.luv2code.aop_pointcut_declaration_combo.dao.*.get*(..))")
+    private void forGetterMethods(){
+
+    }
+    // create a pointcut for setter methods
+    @Pointcut("execution(* com.luv2code.aop_pointcut_declaration_combo.dao.*.set*(..))")
+    private void forSetterMethods(){
+
+    }
+    // create pointcut :include package ... exclude getter and setter
+    @Pointcut("forDaoPackage() && !(forGetterMethods() || forSetterMethods())")
+    public void forDaoPackageNoGetterNoSetter(){
+
+    }
+
     // 2.reuse it(te pointcut declaration) in advice
-    @Before("forDaoPackage()")   // this is called point cut expression //
+    @Before("forDaoPackageNoGetterNoSetter()")   // this is called point cut expression //
     public void beforeAddAccountAdvice() {
         System.out.println("\n====>>> Executing @Before advice on addAccount()");
     }
 
-    @Before("forDaoPackage()")
+    @Before("forDaoPackageNoGetterNoSetter()")
     public void performApiAnalytics() {
         System.out.println("\n====>>> Performing API analytics");
     }
+
+
 
 }
